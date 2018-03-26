@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title></title>
+    <!-- vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.15/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
+
+    <!-- semantic ui cdn -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
+        }
+
+        .ui.menu .item img.logo {
+            margin-right: 1.5em;
+        }
+
+        .main.container {
+            margin-top: 7em;
+        }
+
+        .wireframe {
+            margin-top: 2em;
+        }
+
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+
+        .ui.menu {
+            background-color: #0984e3;
+        }
+
+        .ui.table th{
+          background-color: #00b894;
+          color: #00b894;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+
+    <div class="ui fixed inverted blue menu">
+        <div class="ui container">
+            <a href="#" class="header item">
+            Alts + FI
+          </a>
+            <a href="#" class="item">Home</a>
+
+            <div class="ui simple dropdown item">
+                Alternatives <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#">Investment Capital Balances</a>
+                    <a class="item" href="#">Performance</a>
+                    <a class="item" href="#"><i class ="chart line icon"></i>Charts & Analytics</a>
+                    <div class="divider"></div>
+                    <div class="header">Fund Admin</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i> Managers
+                        <div class="menu">
+                            <a class="item" href="#">New Manager</a>
+                            <a class="item" href="#">Edit Manager</a>
+                        </div>
+                    </div>
+                    <a class="item" href="#">Cashflow Estimates</a>
+                    <a class="item" href="#">Performance Estimates</a>
+                    <a class="item" href="#">Benchmarks & Groups</a>
+                </div>
+            </div>
+
+            <div class="ui simple dropdown item">
+                Fixed Income <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#">Investment Capital Balances</a>
+                    <a class="item" href="#">Performance</a>
+                    <a class="item" href="#"><i class ="chart line icon"></i>Charts & Analytics</a>
+                    <div class="divider"></div>
+                    <div class="header">Fund Admin</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i> Managers
+                        <div class="menu">
+                            <a class="item" href="#">New Manager</a>
+                            <a class="item" href="#">Edit Manager</a>
+                        </div>
+                    </div>
+                    <a class="item" href="#">Cashflow Estimates</a>
+                    <a class="item" href="#">Performance Estimates</a>
+                    <a class="item" href="#">Benchmarks & Groups</a>
+                </div>
+            </div>
+
+
+            <div class="ui simple dropdown item">
+                Market Data <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" href="#">FX</a>
+                    <a class="item" href="#">Libor & Hedge Basis</a>
+                    <a class="item" href="#">HFR Benchmarks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui main container">
+        <h1 class="ui header">Alternatives Performance</h1>
+        <p>some text ...</p>
+
+        <table class="ui celled structured table">
+            <thead>
+                <tr>
+                    <th rowspan="2" style="background-color:#55efc4">INVESTMENT</th>
+                    <th rowspan="2" style="background-color:#55efc4">SINCE</th>
+                    <th rowspan="2" style="background-color:#55efc4">AUM $AUD/$USD (millions)</th>
+                    <th colspan="6" style="background-color:#55efc4">PERFORMANCE %</th>
+                </tr>
+                <tr>
+                    <th style="background-color:#55efc4">JAN</th>
+                    <th style="background-color:#55efc4">FEB</th>
+                    <th style="background-color:#55efc4">MARY</th>
+                    <th style="background-color:#55efc4">YTD CY</th>
+                    <th style="background-color:#55efc4">YTD FY</th>
+                    <th style="background-color:#55efc4">ITD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alpha Fund</td>
+                    <td>Jan/2000</td>
+                    <td class="right aligned">2,000 (1,400)</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                </tr>
+                <tr>
+                    <td>Beta Fund</td>
+                    <td>Jan/2000</td>
+                    <td class="right aligned">2,000 (1,400)</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned"><i class="small blue circle icon"></i>10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                    <td class="right aligned">10.2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
