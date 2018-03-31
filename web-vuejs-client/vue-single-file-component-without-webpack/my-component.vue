@@ -1,12 +1,17 @@
 <template>
-    <div class="hello"><h1>Hello {{who}}</h1></div>
+    <div class="hello"><h1>Hello {{who}}</h1>
+    <component1></component1>
+    </div>
 </template>
 
 <script>
 module.exports = {
+    components:{
+      'component1': httpVueLoader('component1.vue')
+    },
     data: function() {
         return {
-            who: 'world to all'
+            who: 'Michael'
         }
     }
 }
